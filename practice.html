@@ -7,65 +7,106 @@
     <link rel="stylesheet" href="css/global.css" />
   </head>
   <body class="container">
-    <div class="principalButtons">
-      <a href="index.html" class="buttonHome"
-        ><img src="img/house-solid.svg" alt="home"
-      /></a>
-    </div>
-    <div class="subContainer">
-      <div>
-        <input type="radio" id="all" name="operation" value="all" checked />
-        <label for="all">All</label>
-
-        <input type="radio" id="addition" name="operation" value="add" />
-        <label for="addition">Addition (+)</label>
-
-        <input
-          type="radio"
-          id="subtraction"
-          name="operation"
-          value="subtract"
-        />
-        <label for="subtraction">Subtraction (-)</label>
-
-        <input
-          type="radio"
-          id="multiplication"
-          name="operation"
-          value="multiply"
-        />
-        <label for="multiplication">Multiplication (*)</label>
-
-        <input type="radio" id="division" name="operation" value="divide" />
-        <label for="division">Division Entera(/)</label>
+    <div class="center">
+      <div class="principalButtons">
+        <a href="index.html" class="buttonHome"
+          ><img src="img/house-solid.svg" alt="home"
+        /></a>
       </div>
-      <div>
-        <input
-          type="text"
-          id="equation"
-          class="displayPractice"
-          placeholder="0"
-          disabled
-        />
-        <button
-          type="button"
-          id="newEquation"
-          class="buttonEquation"
-          onclick="newEquation()"
-        >
-          New Equation
-        </button>
+      <div class="subContainer">
+        <div class="operationsRadioButtons">
+          <div>
+            <input type="radio" id="all" name="operation" value="all" checked />
+            <label for="all">All</label>
+          </div>
+          <div>
+            <input type="radio" id="addition" name="operation" value="add" />
+            <label for="addition">Addition</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="subtraction"
+              name="operation"
+              value="subtract"
+            />
+            <label for="subtraction">Subtraction</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="multiplication"
+              name="operation"
+              value="multiply"
+            />
+            <label for="multiplication">Multiplication</label>
+          </div>
+
+          <div>
+            <input type="radio" id="division" name="operation" value="divide" />
+            <label for="division">Integer division</label>
+          </div>
+        </div>
+        <div class="subContainer2">
+          <div class="equationContainer">
+            <div>
+              <input
+                type="text"
+                id="equation"
+                class="displayPractice"
+                placeholder="0"
+                disabled
+              />
+              <button
+                type="button"
+                id="newEquation"
+                class="buttonEquation"
+                onclick="newEquation()"
+              >
+                <img src="img/arrows-rotate-solid.svg" alt="reload" />
+              </button>
+            </div>
+            <div>
+              <input
+                type="number"
+                id="result"
+                class="displayPractice"
+                placeholder="0"
+              />
+              <button
+                type="button"
+                class="buttonEquation"
+                onclick="compareResult()"
+              >
+                <img src="img/check-solid.svg" alt="check" />
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <input
-        type="number"
-        id="result"
-        class="displayPractice"
-        placeholder="0"
-      />
-      <button type="button" class="buttonEquation" onclick="compareResult()">
-        Send
-      </button>
     </div>
+    <footer>
+      <p>&copy; 2024 Jose Ortiz</p>
+      <div class="socialLinks">
+        <a href="https://www.linkedin.com/in/joseortizp/" target="_blank"
+          ><img
+            src="img/linkedin-in.svg"
+            alt="linkedin "
+            width="25"
+            height="25"
+        /></a>
+        <a href="https://github.com/JoseOP99/web-calculator" target="_blank"
+          ><img src="img/github.svg" alt="github " width="25" height="25"
+        /></a>
+        <a href="https://cv-jose-ortiz.vercel.app/" target="_blank"
+          ><img
+            src="img/globe-solid.svg"
+            alt="linkedin "
+            width="25"
+            height="25"
+        /></a>
+      </div>
+    </footer>
   </body>
   <script src="js/practice.js"></script>
 </html>

@@ -4,10 +4,10 @@ function delAll() {
 }
 
 function del() {
-  var display = document.getElementById("display").value;
-  deleteLastChar = display.slice(-1);
+  let display = document.getElementById("display").value;
+  const deleteLastChar = display.slice(-1);
   display = display.substring(0, display.length - 1);
-  let numberRegex = /^[0-9]$/;
+  const numberRegex = /^[0-9]$/;
   if (numberRegex.test(parseInt(deleteLastChar))) {
     document.getElementById("display").value = display;
     calculate();
@@ -18,8 +18,8 @@ function del() {
 
 function calculate() {
   let display = document.getElementById("display").value;
-  last = display.slice(-1);
-  let numberRegex = /^[0-9]$/;
+  const last = display.slice(-1);
+  const numberRegex = /^[0-9]$/;
   let result;
   if (numberRegex.test(parseInt(last))) {
     result = eval(display);
@@ -33,7 +33,7 @@ function calculate() {
 }
 
 function appendToDisplay(value) {
-  let display = document.getElementById("display").value;
+  const display = document.getElementById("display").value;
   if (display === "0") {
     document.getElementById("display").value = value;
   } else {
@@ -41,7 +41,7 @@ function appendToDisplay(value) {
   }
 }
 
-let buttons = document.getElementsByClassName("number");
+const buttons = document.getElementsByClassName("number");
 
 Array.from(buttons).forEach(function (button) {
   button.addEventListener("click", function () {

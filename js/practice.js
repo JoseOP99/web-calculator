@@ -1,11 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
-  newEquation();
-});
+document.addEventListener("DOMContentLoaded", newEquation);
 
 function newEquation() {
   document.getElementById("result").disabled = false;
   document.getElementById("result").value = "";
-  let operator = document.querySelector(
+  const operator = document.querySelector(
     'input[name="operation"]:checked'
   ).value;
   switch (operator) {
@@ -34,7 +32,7 @@ function generarEquation(num, operator) {
   let equation = "";
   if (operator === "a") {
     for (let i = 0; i < num; i++) {
-      op = getRandomInt(3);
+      const op = getRandomInt(3);
       equation += getRandomInt(10);
       if (op === 1 && i < num - 1) {
         equation += "+";
@@ -61,14 +59,15 @@ function generarEquation(num, operator) {
 }
 
 function compareResult() {
-  let equation = document.getElementById("equation").value;
-  let result = document.getElementById("result").value;
-  let answer = parseInt(eval(equation));
+  const equation = document.getElementById("equation").value;
+  const result = document.getElementById("result").value;
+  const answer = parseInt(eval(equation));
   if (result === answer.toString()) {
-    alert("Correcto");
+    alert("Correct");
     document.getElementById("result").disabled = true;
+    setTimeout(newEquation, 1000);
   } else {
-    alert("Incorrecto");
+    alert("Incorrect");
   }
 }
 
@@ -76,9 +75,13 @@ const operation = document.querySelectorAll('input[name="operation"]');
 operation.forEach((radio) => {
   radio.addEventListener("change", newEquation);
 });
-const resultInput = document.getElementById("result");
-resultInput.addEventListener("keydown", function (event) {
+
+function handleKeyDown(event) {
   if (event.key === "Enter") {
     compareResult();
   }
-});
+}
+
+const resultInput = document.getElementById("result");
+resultInput.addEventListener("keydown", handleKeyDown);
+
