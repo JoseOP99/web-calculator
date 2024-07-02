@@ -3,47 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Practice</title>
+    <link rel="stylesheet" href="css/global.css" />
   </head>
-  <body>
-    <a href="index.html" class="button">Home</a>
-    <div>
-      <input type="radio" id="all" name="operation" value="all" checked />
-      <label for="all">All</label>
-
-      <input type="radio" id="addition" name="operation" value="add" />
-      <label for="addition">Addition (+)</label>
-
-      <input type="radio" id="subtraction" name="operation" value="subtract" />
-      <label for="subtraction">Subtraction (-)</label>
-
-      <input
-        type="radio"
-        id="multiplication"
-        name="operation"
-        value="multiply"
-      />
-      <label for="multiplication">Multiplication (*)</label>
-
-      <input type="radio" id="division" name="operation" value="divide" />
-      <label for="division">Division Entera(/)</label>
+  <body class="container">
+    <div class="principalButtons">
+      <a href="index.html" class="buttonHome"
+        ><img src="img/house-solid.svg" alt="home"
+      /></a>
     </div>
-    <div>
-      <input
-        type="text"
-        id="equation"
-        class="displayPractice"
-        placeholder="0"
-        disabled
-      />
-      <button
-        type="button"
-        id="newEquation"
-        class="buttonEquation"
-        onclick="newEquation()"
-      >
-        New Equation
-      </button>
+    <div class="subContainer">
+      <div>
+        <input type="radio" id="all" name="operation" value="all" checked />
+        <label for="all">All</label>
+
+        <input type="radio" id="addition" name="operation" value="add" />
+        <label for="addition">Addition (+)</label>
+
+        <input
+          type="radio"
+          id="subtraction"
+          name="operation"
+          value="subtract"
+        />
+        <label for="subtraction">Subtraction (-)</label>
+
+        <input
+          type="radio"
+          id="multiplication"
+          name="operation"
+          value="multiply"
+        />
+        <label for="multiplication">Multiplication (*)</label>
+
+        <input type="radio" id="division" name="operation" value="divide" />
+        <label for="division">Division Entera(/)</label>
+      </div>
+      <div>
+        <input
+          type="text"
+          id="equation"
+          class="displayPractice"
+          placeholder="0"
+          disabled
+        />
+        <button
+          type="button"
+          id="newEquation"
+          class="buttonEquation"
+          onclick="newEquation()"
+        >
+          New Equation
+        </button>
+      </div>
       <input
         type="number"
         id="result"

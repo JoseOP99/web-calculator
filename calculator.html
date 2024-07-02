@@ -3,56 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/global.css" />
   </head>
-  <body>
-    <a href="index.html" class="button">Home</a>
-    <div class="calculator">
-      <div>
-        <input
-          type="text"
-          id="display"
-          class="display"
-          placeholder="0"
-          disabled
-          
-        />
-        <input
-          type="text"
-          id="result"
-          class="display"
-          placeholder="0"
-          disabled
-        />
-      </div>
-      <div class="buttons">
-        <button class="operator" type="button" onclick="delAll()">AC</button>
-        <button class="operator" type="button" onclick="del()" >&larr;</button>
-        <button class="operator" type="button" onclick="add('%')" >%</button>
-        <button class="operator" type="button" onclick="add('/')" >/</button>
-      </div>
-      <div class="buttons">
-        <button class="number" type="button" onclick="appendToDisplay('7')">7</button>
-        <button class="number" type="button" onclick="appendToDisplay('8')" >8</button>
-        <button class="number" type="button" onclick="appendToDisplay('9')" >9</button>
-        <button class="operator" type="button" onclick="add('*')" >*</button>
-      </div>
-      <div class="buttons">
-        <button class="number" type="button" onclick="appendToDisplay('4')">4</button>
-        <button class="number" type="button" onclick="appendToDisplay('5')" >5</button>
-        <button class="number" type="button" onclick="appendToDisplay('6')" >6</button>
-        <button class="operator" type="button" onclick="add('+')" >+</button>
-      </div>
-      <div class="buttons">
-        <button class="number" type="button" onclick="appendToDisplay('1')">1</button>
-        <button class="number" type="button" onclick="appendToDisplay('2')" >2</button>
-        <button class="number" type="button" onclick="appendToDisplay('3')" >3</button>
-        <button class="operator" type="button" onclick="add('-')" >-</button>
-      </div>
-      <div class="buttons">
-        <button class="number" type="button" onclick="appendToDisplay('0')" >0</button>
-        <button class="point" type="button" onclick="add('.')" >.</button>
-        <button class="result" type="button" onclick="result()" >=</button>
+  <body class="container">
+    <div class="principalButtons">
+      <a href="index.html" class="buttonHome"><img src="img/house-solid.svg" alt="home"
+        /></a>
+    </div>
+    <div class="subContainer">
+      <input
+        type="number"
+        id="result"
+        class="display"
+        placeholder="0"
+        disabled
+      />
+      <input
+        type="text"
+        id="display"
+        class="display"
+        placeholder="0"
+        disabled
+      />
+      <div class="allButtons">
+        <div class="buttons">
+          <button class="operator" type="button" onclick="delAll()">AC</button>
+          <button class="operator" type="button" onclick="del()">&larr;</button>
+          <button class="operator" type="button" onclick="add('%')">%</button>
+          <button class="operator" type="button" onclick="add('/')">/</button>
+        </div>
+        <div class="buttons">
+          <button class="number" type="button" onclick="appendToDisplay('7')">
+            7
+          </button>
+          <button class="number" type="button" onclick="appendToDisplay('8')">
+            8
+          </button>
+          <button class="number" type="button" onclick="appendToDisplay('9')">
+            9
+          </button>
+          <button class="operator" type="button" onclick="add('*')">*</button>
+        </div>
+        <div class="buttons">
+          <button class="number" type="button" onclick="appendToDisplay('4')">
+            4
+          </button>
+          <button class="number" type="button" onclick="appendToDisplay('5')">
+            5
+          </button>
+          <button class="number" type="button" onclick="appendToDisplay('6')">
+            6
+          </button>
+          <button class="operator" type="button" onclick="add('+')">+</button>
+        </div>
+        <div class="buttons">
+          <button class="number" type="button" onclick="appendToDisplay('1')">
+            1
+          </button>
+          <button class="number" type="button" onclick="appendToDisplay('2')">
+            2
+          </button>
+          <button class="number" type="button" onclick="appendToDisplay('3')">
+            3
+          </button>
+          <button class="operator" type="button" onclick="add('-')">-</button>
+        </div>
+        <div class="buttons">
+          <button class="number" type="button" onclick="appendToDisplay('0')">
+            0
+          </button>
+          <button class="point" type="button" onclick="add('.')">.</button>
+          <button class="result" type="button" onclick="result()">=</button>
+        </div>
       </div>
     </div>
   </body>
